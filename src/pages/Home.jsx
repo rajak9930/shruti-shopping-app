@@ -2,6 +2,7 @@ import React from "react";
 import { useFetch } from "../hook/useFetch";
 import ProductCart from "../components/ProductCart";
 import { CatApi } from "../apis/api.js";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const { apiData, loading, error } = useFetch(
@@ -12,6 +13,7 @@ const Home = () => {
  
   
   return (
+    <div className="container-fluid">
     <div className="row g-0">
       <div className="col-3">
         <ul class="list-group">
@@ -26,7 +28,8 @@ const Home = () => {
               {apiData.map((item, index) => {
                 return (
                   <li key={index} className="list-group-item">
-                    {item}
+                    <Link to={`cat/${item}`}>{item}</Link>
+                    
                   </li>
                 );
               })}
@@ -35,9 +38,10 @@ const Home = () => {
         </ul>
       </div>
 
-      <div className="col-9">
+      <div className="col-9 px-3">
         <ProductCart/>
       </div>
+    </div>
     </div>
   );
 };
