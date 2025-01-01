@@ -3,25 +3,25 @@ import { NavLink } from 'react-router-dom'
 
 const Header = () => {
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
-    <div className="container-fluid">
-      <a className="navbar-brand" href="#">Navbar w/ text</a>
+    <nav className=" bg-black text-white">
+    <div className=" flex-row ">
+      <a className="navbar-brand" href="#">Sopping Cart </a>
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>
-      <div className="collapse navbar-collapse" id="navbarText">
-        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-          <li className="nav-item">
-           <NavLink to="/" className="nav-link px-2" aria-current="page">Home</NavLink>
+      <div className="" id="navbarText">
+        <ul className="navbar-nav me-auto mb-2">
+          <li className="">
+           <NavLink to="/" className="text-white" aria-current="page">Home</NavLink>
           </li>
-          <li className="nav-item">
-           <NavLink to="/about" className="nav-link px-2">About</NavLink>
+          <li className="">
+           <NavLink to="/about" className="">About</NavLink>
           </li>
-          <li className="nav-item">
-           <NavLink to="/product" className="nav-link px-2">Product</NavLink>
+          <li className="">
+           <NavLink to="/product" className="">Product</NavLink>
           </li>
         </ul>
-       <NavLink to={"cart" } className="btn btn-outline-light me-2">Cart</NavLink>
+       <NavLink to={"cart" } className="">Cart</NavLink>
       </div>
     </div>
   </nav>

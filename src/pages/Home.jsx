@@ -5,11 +5,9 @@ import { CatApi } from "../apis/api.js";
 import { Link } from "react-router-dom";
 // import img1 from "../assets/img1.jpg"
 // import Slider from "react-slick";
-
+import { RiArrowRightSLine } from "react-icons/ri";
 const Home = () => {
-  const { apiData, loading, error } = useFetch(
-   CatApi
-  );
+  const { apiData, loading, error } = useFetch(CatApi);
 
   // var settings = {
   //   dots: true,
@@ -27,37 +25,37 @@ const Home = () => {
   // };
   // console.log(apiData)
 
- 
-  
   return (
-    <div className="container-fluid">           
-    
-    <div className="row g-0">
-      <div className="col-3">
-        <ul class="list-group">
-          <li class="list-group-item active" aria-current="true">
-            An active item
-          </li>
+    <div className=" container">
+      <div className="">
+        <div className="">
+          <ul className="border flex  flex-col">
+            {loading ? (
+              <span>loading...</span>
+            ) : (
+              <>
+                {apiData.map((item, index) => {
+                  return (
+                    <li
+                      key={index}
+                      className="text-xl font-medium uppercase border flex  items-center px-4 py-2"
+                    >
+                      <Link to={`cat/${item}`} className="mr-2">
+                        {item}
+                      </Link>
+                      <span>
+                        <RiArrowRightSLine color="black" size={27} />
+                      </span>
+                    </li>
+                  );
+                })}
+              </>
+            )}
+          </ul>
+        </div>
 
-          {loading ? (
-            <span>loading...</span>
-          ) : (
-            <>
-              {apiData.map((item, index) => {
-                return (
-                  <li key={index} className="list-group-item">
-                    <Link to={`cat/${item}`}>{item}</Link>
-                    
-                  </li>
-                );
-              })}
-            </>
-          )}
-        </ul>
-      </div>
-
-      {/* Banner Section */}
-      {/* <div className="homeslider1-rj">
+        {/* Banner Section */}
+        {/* <div className="homeslider1-rj">
       <Slider {...settings}>
         <div className="row slidehome1-rj1 py-5 md:py-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 slidehome1-rj">
@@ -84,13 +82,12 @@ const Home = () => {
       </Slider>
     </div>
    */}
-      {/* <div className="col-9 px-3">
+        {/* <div className="col-9 px-3">
         <ProductCart/>
       </div> */}
+      </div>
     </div>
-</div>
   );
 };
-
 
 export default Home;

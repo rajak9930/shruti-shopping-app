@@ -10,7 +10,7 @@ const ProductDetails = () => {
 
   useEffect(() => {
     getApiData();
-  }, [Params]);
+  }, [Params.id]);
 
   const getApiData = async () => {
     try {
