@@ -24,7 +24,7 @@ const Header = () => {
           </li>
           <li>
             <NavLink
-              to="/about"
+              to="about"
               className="text-white font-semibold text-xl hover:text-gray-400 transition duration-300 border-b-2 border-transparent hover:border-gray-400 pb-1"
             >
               About
@@ -32,7 +32,7 @@ const Header = () => {
           </li>
           <li>
             <NavLink
-              to="/product"
+              to="product"
               className="text-white font-semibold text-xl hover:text-gray-400 transition duration-300 border-b-2 border-transparent hover:border-gray-400 pb-1"
             >
               Product{" "}

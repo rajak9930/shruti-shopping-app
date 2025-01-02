@@ -7,6 +7,7 @@ import Product from "./pages/Product";
 import ProductDetails from "./pages/Product-details";
 import Header from "./Layout/Header";
 import CatDetails from "./pages/Cat-details";
+import Redux from "./pages/Redux";
 function App() {
   return (
     <BrowserRouter>
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
+        <Route path="redux" element={<Redux />} />
         <Route path="product" element={<Product />} />
         <Route path="cart" element={<Cart />} />
         <Route path="details/:id" element={<ProductDetails />} />

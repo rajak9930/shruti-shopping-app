@@ -9,6 +9,8 @@ import { RiArrowRightSLine } from "react-icons/ri";
 const Home = () => {
   const { apiData, loading, error } = useFetch(CatApi);
 
+  console.log(error)
+
   // var settings = {
   //   dots: true,
   //   fade: true,
