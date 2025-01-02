@@ -8,13 +8,15 @@ const Product = () => {
 
   return (
     // <div>Product</div>
-    <div className="">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 shadow-sm rounded-md  p-4 ">
       {loading ? (
-        <div>Loading...</div>
+        <div className="font-bold">Loading...</div>
       ) : (
         <>
           {apiData.map((item) => (
+            
             <ProductCart key={item.id} item={item} />
+            
           ))}
         </>
       )}

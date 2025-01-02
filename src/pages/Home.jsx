@@ -31,7 +31,7 @@ const Home = () => {
         <div className="">
           <ul className="border flex  flex-col">
             {loading ? (
-              <span>loading...</span>
+              <span className="font-bold">loading...</span>
             ) : (
               <>
                 {apiData.map((item, index) => {

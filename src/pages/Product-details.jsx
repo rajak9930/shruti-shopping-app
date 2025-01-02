@@ -24,37 +24,39 @@ const ProductDetails = () => {
     }
   };
 
-  
-  // return <div>
-  //   <h1>{item?.title}</h1>
-  //   <h2>Price: ${item.price}</h2>
-  // </div>;
-
   return (
-    <div>
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-start pt-8 px-4 ">
       {item ? (
-        <>
-          <h1>{item.title}</h1>
+        <div className="bg-white p-2 rounded-lg shadow-lg w-full sm-w:96 lg:w-1/2 text-center">
+          <h1 className="text-2xl font-semibold mb-2">{item.title}</h1>
 
-          <img src={item.image} alt={item.title}
-            style={{width:'100%', maxWidth: "300px",height:'auto'}}
+          <img
+            src={item.image}
+            alt={item.title}
+            className="w-48 h-48 object-cover mx-auto mb-4"
+            style={{ width: "100%", maxWidth: "300px", height: "auto" }}
           />
 
-          <h2>Price: ${item.price}</h2>
+          <h2 className="text-xl text-black mb-4">Price:${item.price}</h2>
 
-          <p>
+          <p className="text-black mb-4">
             <strong>Description:</strong> {item.description}
           </p>
 
-          <p>
+          <p className="text-black">
             <strong>Rating:</strong> {item.rating?.rate} ({item.rating?.count}{" "}
             reviews)
-             </p> 
-        </>
+          </p>
+          <button className="bg-black text-white p-2 rounded  mt-6">
+            Add To Cart
+          </button>
+        </div>
       ) : (
-        <p>Loading...</p>
+        <p className="font-bold">Loading...</p>
       )}
     </div>
+
+   
   );
 };
 
