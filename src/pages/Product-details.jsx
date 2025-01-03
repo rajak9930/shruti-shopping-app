@@ -1,6 +1,11 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { FaStar } from "react-icons/fa";
+import { FaRegStar } from "react-icons/fa6";
+import { BsTruck } from "react-icons/bs";
+import { TiArrowSync } from "react-icons/ti";
+import { FaRegHeart } from "react-icons/fa";
 
 const ProductDetails = () => {
   const Params = useParams();
@@ -25,38 +30,90 @@ const ProductDetails = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-start pt-8 px-4 ">
-      {item ? (
-        <div className="bg-white p-2 rounded-lg shadow-lg w-full sm-w:96 lg:w-1/2 text-center">
-          <h1 className="text-2xl font-semibold mb-2">{item.title}</h1>
-
-          <img
-            src={item.image}
-            alt={item.title}
-            className="w-48 h-48 object-cover mx-auto mb-4"
-            style={{ width: "100%", maxWidth: "300px", height: "auto" }}
-          />
-
-          <h2 className="text-xl text-black mb-4">Price:${item.price}</h2>
-
-          <p className="text-black mb-4">
-            <strong>Description:</strong> {item.description}
-          </p>
-
-          <p className="text-black">
-            <strong>Rating:</strong> {item.rating?.rate} ({item.rating?.count}{" "}
-            reviews)
-          </p>
-          <button className="bg-black text-white p-2 rounded  mt-6">
-            Add To Cart
-          </button>
+    <div className="flex justify-center items-center min-h-screen">
+      <div className="w-3/5 h-[700px] bg-gray-50 flex">
+        {/* Left side */}
+        <div className="mr-auto flex items-center p-20">
+          {item ? (
+            <img
+              src={item.image}
+              alt={item.title}
+              className="w-[1100px] h-[600px] object-cover mx-auto mb-4"
+            />
+          ) : (
+            <p>Loading...</p>
+          )}
         </div>
-      ) : (
-        <p className="font-bold">Loading...</p>
-      )}
-    </div>
 
-   
+        {/* Right side */}
+        <div className="flex flex-col justify-center p-6 space-y-6">
+          {item ? (
+            <>
+              <h1 className="text-4xl font-bold">{item.title}</h1>
+              <div className="flex items-center space-x-1">
+                <FaStar className="text-yellow-500" />
+                <FaStar className="text-yellow-500" />
+                <FaStar className="text-yellow-500" />
+                <FaStar className="text-yellow-500" />
+                <FaRegStar />
+              </div>
+              <h2 className="text-2xl font-semibold text-gray-800">
+                Price: ${item.price}
+              </h2>
+              <p className="text-gray-700">{item.description}</p>
+              <hr className="border-t-2 border-gray-400 mt-6" />{" "}
+              {/* Horizontal Line */}
+              {/* BUTTON PART */}
+              <div className="flex justify-between items-center mt-4">
+                <button className="flex items-center justify-between px-6 py-3 bg-white text-black rounded-md border border-gray-400 ">
+                  <span className="text-xl">-</span>
+                  <div className="border-l-2 border-gray-400 mx-4 h-6"></div>{" "}
+                  {/* Vertical Line */}
+                  <span className="text-xl">2</span>
+                  <div className="border-l-2 border-gray-400 mx-4 h-6 "></div>{" "}
+                  {/* Vertical Line */}
+                  <span className="text-xl">+</span>
+                </button>
+
+                {/* Buy Now Button */}
+                <button className="text-xl w-40 px-6 py-4 bg-black text-white rounded-md ml-4 hover:bg-gray-700">
+                  Buy Now
+                </button>
+
+                <button className="bg-black  p-4 rounded-lg border border-gray-500 hover:bg-gray-700 transition duration-300">
+                  <FaRegHeart className="text-white text-2xl  " />
+                </button>
+              </div>
+              {/* Box  Free Delivery and Return Delivery */}
+              <div className="p-4 mt-6 rounded-lg border border-gray-400 ">
+                <div className="flex items-center space-x-2">
+                  <BsTruck className="text-gray-800 text-3xl" />
+                  <h4 className="text-lg font-bold text-gray-800">
+                    Free Delivery
+                  </h4>
+                </div>
+                <p className="text-md ml-4 ">
+                  Enter your postal code for Delivery Availability
+                </p>
+
+                <hr className="border-t-5 border-gray-400 my-4 w-full" />
+                <div className="flex items-center space-x-2">
+                  <TiArrowSync className="text-gray-800 text-4xl" />
+                  <h4 className="text-lg font-bold text-gray-800">
+                    Return Delivery
+                  </h4>
+                </div>
+                <p className="text-md ml-4">
+                  Free 30 Days Delivery Returns.Delails
+                </p>
+              </div>
+            </>
+          ) : (
+            <p>Loading...</p>
+          )}
+        </div>
+      </div>
+    </div>
   );
 };
 
