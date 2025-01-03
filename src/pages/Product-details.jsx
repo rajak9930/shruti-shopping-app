@@ -30,88 +30,86 @@ const ProductDetails = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen">
-      <div className="w-3/5 h-[700px] bg-gray-50 flex">
-        {/* Left side */}
-        <div className="mr-auto flex items-center p-20">
-          {item ? (
-            <img
-              src={item.image}
-              alt={item.title}
-              className="w-[1100px] h-[600px] object-cover mx-auto mb-4"
-            />
-          ) : (
-            <p>Loading...</p>
-          )}
-        </div>
+    <div className="flex flex-col md:flex-row  bg-gray-50  gap-16 container mx-auto">
+      {/* Left side */}
+      <div className="w-full h-[650px] bg-gray-100 flex  mb-4 mx-auto items-center justify-center">
+        {item ? (
+          <img
+            src={item.image}
+            alt={item.title}
+            className=" max-w-full max-h-full"
+          />
+        ) : (
+          <p>Loading...</p>
+        )}
+      </div>
 
-        {/* Right side */}
-        <div className="flex flex-col justify-center p-6 space-y-6">
-          {item ? (
-            <>
-              <h1 className="text-4xl font-bold">{item.title}</h1>
-              <div className="flex items-center space-x-1">
-                <FaStar className="text-yellow-500" />
-                <FaStar className="text-yellow-500" />
-                <FaStar className="text-yellow-500" />
-                <FaStar className="text-yellow-500" />
-                <FaRegStar />
+      {/* Right side */}
+      <div className="flex flex-col justify-center p-6 space-y-6">
+        {item ? (
+          <>
+            <h1 className="text-4xl font-bold">{item.title}</h1>
+            <div className="flex items-center space-x-1">
+              <FaStar className="text-yellow-500" />
+              <FaStar className="text-yellow-500" />
+              <FaStar className="text-yellow-500" />
+              <FaStar className="text-yellow-500" />
+              <FaRegStar />
+            </div>
+            <h2 className="text-2xl font-semibold text-gray-800">
+              Price: ${item.price}
+            </h2>
+            <p className="text-gray-700">{item.description}</p>
+            <hr className="border-t-2 border-gray-400 mt-6" />{" "}
+            {/* Horizontal Line */}
+            {/* BUTTON PART */}
+            <div className="flex gap-10 items-center mt-4">
+              <button className="flex items-center justify-between px-6 py-3 bg-white text-black rounded-md border border-gray-400 ">
+                <span className="text-xl">-</span>
+                <div className="border-l-2 border-gray-400 mx-4 h-6"></div>{" "}
+                {/* Vertical Line */}
+                <span className="text-xl">2</span>
+                <div className="border-l-2 border-gray-400 mx-4 h-6 "></div>{" "}
+                {/* Vertical Line */}
+                <span className="text-xl">+</span>
+              </button>
+
+              {/* Buy Now Button */}
+              <button className="text-xl w-40 px-6 py-4 bg-black text-white rounded-md ml-4 hover:bg-gray-700">
+                Buy Now
+              </button>
+
+              <button className="bg-black  p-4 rounded-lg border border-gray-500 hover:bg-gray-700 transition duration-300">
+                <FaRegHeart className="text-white text-2xl  " />
+              </button>
+            </div>
+            {/* Box  Free Delivery and Return Delivery */}
+            <div className="p-4 mt-6 rounded-lg border border-gray-400 ">
+              <div className="flex items-center space-x-2">
+                <BsTruck className="text-gray-800 text-3xl" />
+                <h4 className="text-lg font-bold text-gray-800">
+                  Free Delivery
+                </h4>
               </div>
-              <h2 className="text-2xl font-semibold text-gray-800">
-                Price: ${item.price}
-              </h2>
-              <p className="text-gray-700">{item.description}</p>
-              <hr className="border-t-2 border-gray-400 mt-6" />{" "}
-              {/* Horizontal Line */}
-              {/* BUTTON PART */}
-              <div className="flex justify-between items-center mt-4">
-                <button className="flex items-center justify-between px-6 py-3 bg-white text-black rounded-md border border-gray-400 ">
-                  <span className="text-xl">-</span>
-                  <div className="border-l-2 border-gray-400 mx-4 h-6"></div>{" "}
-                  {/* Vertical Line */}
-                  <span className="text-xl">2</span>
-                  <div className="border-l-2 border-gray-400 mx-4 h-6 "></div>{" "}
-                  {/* Vertical Line */}
-                  <span className="text-xl">+</span>
-                </button>
+              <p className="text-md ml-4 underline">
+                Enter your postal code for Delivery Availability
+              </p>
 
-                {/* Buy Now Button */}
-                <button className="text-xl w-40 px-6 py-4 bg-black text-white rounded-md ml-4 hover:bg-gray-700">
-                  Buy Now
-                </button>
-
-                <button className="bg-black  p-4 rounded-lg border border-gray-500 hover:bg-gray-700 transition duration-300">
-                  <FaRegHeart className="text-white text-2xl  " />
-                </button>
+              <hr className="border-t-5 border-gray-400 my-4 w-full" />
+              <div className="flex items-center space-x-2">
+                <TiArrowSync className="text-gray-800 text-4xl" />
+                <h4 className="text-lg font-bold text-gray-800">
+                  Return Delivery
+                </h4>
               </div>
-              {/* Box  Free Delivery and Return Delivery */}
-              <div className="p-4 mt-6 rounded-lg border border-gray-400 ">
-                <div className="flex items-center space-x-2">
-                  <BsTruck className="text-gray-800 text-3xl" />
-                  <h4 className="text-lg font-bold text-gray-800">
-                    Free Delivery
-                  </h4>
-                </div>
-                <p className="text-md ml-4 ">
-                  Enter your postal code for Delivery Availability
-                </p>
-
-                <hr className="border-t-5 border-gray-400 my-4 w-full" />
-                <div className="flex items-center space-x-2">
-                  <TiArrowSync className="text-gray-800 text-4xl" />
-                  <h4 className="text-lg font-bold text-gray-800">
-                    Return Delivery
-                  </h4>
-                </div>
-                <p className="text-md ml-4">
-                  Free 30 Days Delivery Returns.Delails
-                </p>
-              </div>
-            </>
-          ) : (
-            <p>Loading...</p>
-          )}
-        </div>
+              <p className="text-md ml-4">
+                Free 30 Days Delivery Returns.Delails
+              </p>
+            </div>
+          </>
+        ) : (
+          <p>Loading...</p>
+        )}
       </div>
     </div>
   );
