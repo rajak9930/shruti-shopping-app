@@ -4,7 +4,6 @@ import { useFetch } from "../hook/useFetch";
 import { CatApi } from "../apis/api.js";
 import { Link } from "react-router-dom";
 import { RiArrowRightSLine } from "react-icons/ri";
-import { Carousel } from "rsuite";
 import Slider from "react-slick";
 const Home = () => {
   const { apiData, loading, error } = useFetch(CatApi);
