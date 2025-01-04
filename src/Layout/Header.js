@@ -6,72 +6,86 @@ import { LuShoppingCart } from "react-icons/lu";
 
 const Header = () => {
   return (
-    <nav className=" bg-black text-white flex  items-center justify-between px-4 py-10  ">
-      <div className=" text-white font-bold text-4xl ">
-        <a className="navbar-brand" href="#">
-          H&M
-        </a>
-      </div>
-      <div className="hidden  md:flex md:justify-center w-full" id="navbarText">
-        <ul className="flex flex-col md:flex-row md:space-x-6 space-y-4 md:space-y-0 text-center">
-          <li>
-            <NavLink
-              to="/"
-              className="text-white font-semibold text-xl hover:text-gray-400 transition duration-300 border-b-2   "
-            >
-              Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="about"
-              className="text-white font-semibold text-xl hover:text-gray-400 transition duration-300 border-b-2 border-transparent hover:border-gray-400 pb-1"
-            >
-              About
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="product"
-              className="text-white font-semibold text-xl hover:text-gray-400 transition duration-300 border-b-2 border-transparent hover:border-gray-400 pb-1"
-            >
-              Product{" "}
-            </NavLink>
-          </li>
-
-          <li>
-            <NavLink
-              to={"cart"}
-              className="text-white font-semibold text-xl hover:text-gray-400 transition duration-300 border-b-2 border-transparent hover:border-gray-400 pb-1"
-            >
-              Cart
-            </NavLink>
-          </li>
-        </ul>
+    <>
+      <div className="bg-black text-white text-center py-6">
+        <p className="text-xl">
+          Summer Sale For All Swin Suits And Express Delivery-OFF 50%{" "}
+          <span className="font-bold text-xl underline">Shop Now</span>
+        </p>
       </div>
 
-      {/* Search Bar */}
-      <div className="flex items-center space-x-4">
-        <input
-          type="text"
-          placeholder="What are looking for?"
-          className="px-4 py-2 rounded-lg bg-gray-900 text-white placeholder-black-400 focus:outline-none focus:ring-2 focus:ring-gray-600"
-        />
-        <button className="bg-black-700 p-2 rounded-lg hover:bg-gray-600 transition duration-300">
-          <HiMagnifyingGlass className="text-white text-2xl" />
-        </button>
-        
-        <button className="bg-black-700 p-2 rounded-lg hover:bg-gray-600 transition duration-300">
-        <IoHeartOutline className="text-white text-2xl"  />
-        </button>
+      <nav className=" bg-white text-black flex  items-center justify-between px-4 py-10  ">
+        <div className=" text-black font-bold text-4xl ">
+          <a className="navbar-brand" href="#">
+            H&M
+          </a>
+        </div>
+        <div
+          className="hidden  md:flex md:justify-center w-full"
+          id="navbarText"
+        >
+          <ul className="flex flex-col md:flex-row md:space-x-6 space-y-4 md:space-y-0 text-center">
+            <li>
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  `text-black font-semibold text-xl hover:text-gray-800 transition duration-300 ${
+                    isActive ? "border-b-2 border-black" : ""
+                  }`
+                }
+              >
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="about"
+                className={({ isActive }) =>
+                  `text-black font-semibold text-xl hover:text-gray-800 transition duration-300 ${
+                    isActive ? "border-b-2 border-black" : ""
+                  }`
+                }
+              >
+                About
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="product"
+                className={({ isActive }) =>
+                  `text-black font-semibold text-xl hover:text-gray-800 transition duration-300 ${
+                    isActive ? "border-b-2 border-black" : ""
+                  }`
+                }
+              >
+                product
+              </NavLink>
+            </li>
+          </ul>
+        </div>
 
-        <button className="bg-black-700 p-2 rounded-lg hover:bg-gray-600 transition duration-300">
-        <LuShoppingCart className="text-white text-2xl"  />
-        </button>
-        
-        
-      </div>
-    </nav>
+        {/* Search Bar */}
+        <div className="flex items-center space-x-4">
+          <input
+            type="text"
+            placeholder="What are looking for?"
+            className="px-4 py-2 rounded-lg bg-white text-black placeholder-black-400 focus:outline-none focus:ring-2 focus:ring-gray-800 border border-spacing-80"
+          />
+          <button className="bg-black-700 p-2 rounded-lg hover:bg-gray-600 transition duration-300">
+            <HiMagnifyingGlass className="text-black text-2xl" />
+          </button>
+
+          <button className="bg-black-700 p-2 rounded-lg hover:bg-gray-600 transition duration-300">
+            <IoHeartOutline className="text-black text-2xl" />
+          </button>
+
+          <button className="bg-black-700 p-2 rounded-lg hover:bg-gray-600 transition duration-300">
+            <LuShoppingCart className="text-black text-2xl" />
+          </button>
+        </div>
+      </nav>
+      <hr  className="border-t-2 border-gray-300"/>
+    </>
   );
 };
 

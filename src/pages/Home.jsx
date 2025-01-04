@@ -6,32 +6,25 @@ import { Link } from "react-router-dom";
 // import img1 from "../assets/img1.jpg"
 // import Slider from "react-slick";
 import { RiArrowRightSLine } from "react-icons/ri";
+// import Swiper from "swiper";
+// import { Autoplay, Navigation, Pagination } from "swiper/modules";
+// import { Swiper, SwiperSlide } from "swiper/react";
 const Home = () => {
   const { apiData, loading, error } = useFetch(CatApi);
 
-  console.log(error)
+  console.log(error);
 
-  // var settings = {
-  //   dots: true,
-  //   fade: true,
-  //   lazyLoad: true,
-  //   infinite: true,
-  //   speed: 500,
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1,
-  //   autoplay: true,
-  //   autoplaySpeed: 2000,
-  //   pauseOnHover: true,
-  //   arrows: false,
-  //   waitForAnimate: false,
-  // };
-  // console.log(apiData)
-
+  // const images = [
+  //   "/images/img1.jpg",
+  //   "/images/img2.jpg",
+  //   "/images/img3.jpg",
+  //   "/images/img4.jpg",
+  // ];
   return (
     <div className=" container">
-      <div className="">
+      <div className="flex flex-col items-start">
         <div className="">
-          <ul className="border flex  flex-col">
+          <ul className=" flex  flex-col border-r-2 border-gray-200 pr-4 ">
             {loading ? (
               <span className="font-bold">loading...</span>
             ) : (
@@ -40,7 +33,7 @@ const Home = () => {
                   return (
                     <li
                       key={index}
-                      className="text-xl font-medium uppercase border flex  items-center px-4 py-2"
+                      className="text-xl font-medium uppercase  flex items-center px-4 py-6"
                     >
                       <Link to={`cat/${item}`} className="mr-2">
                         {item}
@@ -55,39 +48,35 @@ const Home = () => {
             )}
           </ul>
         </div>
-
-        {/* Banner Section */}
-        {/* <div className="homeslider1-rj">
-      <Slider {...settings}>
-        <div className="row slidehome1-rj1 py-5 md:py-16">
-          <div className="grid grid-cols-1 lg:grid-cols-2 slidehome1-rj">
-            <div className="container">
-              <div className="slidercnt1-rj">
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-white">
-                  Unlock endless <br /> posibilities with <br /> our hardware
-                  rentals
-                </h2>
-                <button className="text-lg shopbtn-rj mt-6 py-2 px-4 bg-white text-[#330065] font-extrabold rounded hover:bg-[#e6e6e6] transition duration-150 ease-out hover:ease-in">
-                  Shop Now
-                </button>
-              </div>
-            </div>
-            <div className="container">
-              <div className="slidercnt1-rj">
-              <img src={img1} alt="Hardware Rentals" className="w-full h-auto object-cover" />
-              </div>
-            </div>
-          </div>
-        </div>
-       
-       
-      </Slider>
-    </div>
-   */}
-        {/* <div className="col-9 px-3">
-        <ProductCart/>
-      </div> */}
       </div>
+
+      {/* Slider side */}
+
+      {/* <div className="mt-8">
+        <Swiper
+          modules={[Navigation, Pagination, Autoplay]}
+          slidesPerView={4}
+          spaceBetween={20}
+          navigation
+          Pagination={{ clickable: true }}
+          autoplay={{ delay: 3000 }}
+          loop
+        >
+          {images.map((image, index) => (
+            <SwiperSlide key={index}>
+              <img
+                src={image}
+                alt={`Slide ${index + 1}`}
+                className="w-96 h-64 object-cover rounded-lg"
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
+        <div className="mt-4">
+          <div className="swiper-pagination"></div>
+        </div>
+      </div> */}
     </div>
   );
 };
