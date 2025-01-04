@@ -5,12 +5,13 @@ import { Link } from "react-router-dom";
 import { FaStar, FaStarHalf } from "react-icons/fa";
 import { FaRegStar } from "react-icons/fa6";
 import { IoHeartOutline, IoEyeOutline } from "react-icons/io5";
-// import { Rate } from "rsuite";
-// import "rsuite/dist/rsuite.min.css";
+ import { Rate } from "rsuite";
+ import "rsuite/dist/rsuite.min.css";
 
-const ProductCart = ({ item ,rating,setRating}) => {
+const ProductCart = ({ item}) => {
   const { image, title, price, id } = item;
 
+  console.log(item.rating.rate);
   
 
 
@@ -47,17 +48,10 @@ const ProductCart = ({ item ,rating,setRating}) => {
 
         <h6 className="text-lg font-bold text-black text-one-line ">{title}</h6>
         <h5 className="text-xl font-semibold text-red-950">${price}</h5>
-        
-        {/* <div className="mt-2">
-          <Rate
-            defaultValue={rating}
-            allowHalf
-            size="lg"
-            onChange={(value) => setRating(value)} // Update rating on change
-            className="text-yellow-400"
-          />
-          <span className="text-gray-400 ml-2">({item.rating.count})</span>
-        </div> */}
+        <div className="flex flex-row">
+        <Rate readOnly defaultValue={item.rating.rate} allowHalf color="yellow"/>
+        </div>
+      
 
 
 

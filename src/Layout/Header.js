@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink,Link } from "react-router-dom";
 import { HiMagnifyingGlass } from "react-icons/hi2";
 import { IoHeartOutline } from "react-icons/io5";
 import { LuShoppingCart } from "react-icons/lu";
@@ -7,18 +7,18 @@ import { LuShoppingCart } from "react-icons/lu";
 const Header = () => {
   return (
     <>
-      <div className="bg-black text-white text-center py-6">
-        <p className="text-xl">
+      <div className="bg-black text-white text-center py-2">
+        <p className="text-base">
           Summer Sale For All Swin Suits And Express Delivery-OFF 50%{" "}
-          <span className="font-bold text-xl underline">Shop Now</span>
+          <span className="font-bold text-normal underline">Shop Now</span>
         </p>
       </div>
 
-      <nav className=" bg-white text-black flex  items-center justify-between px-4 py-10  ">
+      <nav className=" bg-white text-black flex  items-center justify-between px-4 py-5  ">
         <div className=" text-black font-bold text-4xl ">
-          <a className="navbar-brand" href="#">
+          <Link to="/" className="navbar-brand" href="#">
             H&M
-          </a>
+          </Link>
         </div>
         <div
           className="hidden  md:flex md:justify-center w-full"
@@ -29,7 +29,7 @@ const Header = () => {
               <NavLink
                 to="/"
                 className={({ isActive }) =>
-                  `text-black font-semibold text-xl hover:text-gray-800 transition duration-300 ${
+                  `text-black font-semibold text-base hover:text-gray-800 transition duration-300 uppercase ${
                     isActive ? "border-b-2 border-black" : ""
                   }`
                 }
@@ -37,28 +37,29 @@ const Header = () => {
                 Home
               </NavLink>
             </li>
-            <li>
-              <NavLink
-                to="about"
-                className={({ isActive }) =>
-                  `text-black font-semibold text-xl hover:text-gray-800 transition duration-300 ${
-                    isActive ? "border-b-2 border-black" : ""
-                  }`
-                }
-              >
-                About
-              </NavLink>
-            </li>
+         
             <li>
               <NavLink
                 to="product"
                 className={({ isActive }) =>
-                  `text-black font-semibold text-xl hover:text-gray-800 transition duration-300 ${
+                  `text-black font-semibold text-base hover:text-gray-800 transition duration-300 uppercase ${
                     isActive ? "border-b-2 border-black" : ""
                   }`
                 }
               >
                 product
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="about"
+                className={({ isActive }) =>
+                  `text-black font-semibold text-base hover:text-gray-800 transition duration-300 uppercase ${
+                    isActive ? "border-b-2 border-black" : ""
+                  }`
+                }
+              >
+                About
               </NavLink>
             </li>
           </ul>

@@ -8,6 +8,9 @@ import ProductDetails from "./pages/Product-details";
 import Header from "./Layout/Header";
 import CatDetails from "./pages/Cat-details";
 import Redux from "./pages/Redux";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "rsuite/dist/rsuite.min.css";
 function App() {
   return (
     <BrowserRouter>

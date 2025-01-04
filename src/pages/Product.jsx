@@ -2,7 +2,6 @@ import React from "react";
 import ProductCart from "../components/ProductCart";
 import { useFetch } from "../hook/useFetch";
 import { ProductApi } from "../apis/api";
-
 const Product = () => {
   const { apiData, loading, error } = useFetch(ProductApi);
 
