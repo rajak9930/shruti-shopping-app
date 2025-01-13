@@ -10,6 +10,7 @@ import CatDetails from "./pages/Cat-details";
 import Redux from "./pages/Redux";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Footer from "./Layout/Footer";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="details/:id" element={<ProductDetails />} />
         <Route path="cat/:cat" element={<CatDetails/>}/>
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

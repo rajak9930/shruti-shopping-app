@@ -44,8 +44,9 @@ const ProductCart = ({ item }) => {
 
         <h6 className="text-lg font-bold text-black text-one-line ">{title}</h6>
         <h5 className="text-xl font-semibold text-red-950">${price}</h5>
-        <div className="flex flex-row">
+        <div className="flex flex-row justify-center items-center">
           <Rate value={item.rating.rate} disabled allowHalf />
+          <span>({item.rating.count})</span>
         </div>
       </Link>
     </div>

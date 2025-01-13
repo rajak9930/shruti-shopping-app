@@ -6,6 +6,8 @@ import { FaRegStar } from "react-icons/fa6";
 import { BsTruck } from "react-icons/bs";
 import { TiArrowSync } from "react-icons/ti";
 import { FaRegHeart } from "react-icons/fa";
+import Rate from "rc-rate";
+import "rc-rate/assets/index.css";
 
 const ProductDetails = () => {
   const Params = useParams();
@@ -49,13 +51,9 @@ const ProductDetails = () => {
         {item ? (
           <>
             <h1 className="text-4xl font-bold">{item.title}</h1>
-            <div className="flex items-center space-x-1">
-              <FaStar className="text-yellow-500" />
-              <FaStar className="text-yellow-500" />
-              <FaStar className="text-yellow-500" />
-              <FaStar className="text-yellow-500" />
-              <FaRegStar />
-            </div>
+            <div className="flex flex-row">
+          <Rate value={item.rating.rate} disabled allowHalf />
+        </div>
             <h2 className="text-2xl font-semibold text-gray-800">
               Price: ${item.price}
             </h2>

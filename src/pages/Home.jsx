@@ -22,12 +22,12 @@ const Home = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true, // Optional for auto-sliding
+    autoplay: true,
   };
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto   px-4 py-8">
       <div className="flex flex-col md:flex-row">
-        <div className=" md:basis-1/3 w-full md:w-auto">
+        <div className=" md:basis-1/3 w-full md:w-auto md:sticky md:top-0 ">
           <ul className="border-r-2 flex-col border-gray-200 pr-4 ">
             {loading ? (
               <span className="font-bold">loading...</span>
@@ -52,19 +52,19 @@ const Home = () => {
             )}
           </ul>
         </div>
-        <div className="md:basis-1/1 w-[70%] ">
+        
+
+        <div className="md:basis-2/3 w-full md:w-[70%]">
           <Slider {...settings}>
-            {images.map((image) => {
-              return (
-                <div className="w-full h-[450px] bg-gray-300">
-                  <img
-                    src={image}
-                    className=" object-cover w-full h-full"
-                    alt="Image"
-                  />
-                </div>
-              );
-            })}
+            {images.map((image, index) => (
+              <div key={index} className="w-full h-auto">
+                <img
+                  src={image}
+                  className="object-cover w-full h-[300px] md:h-[500px] lg:h-[600px]"
+                  alt={`Image ${index + 1}`}
+                />
+              </div>
+            ))}
           </Slider>
         </div>
       </div>
