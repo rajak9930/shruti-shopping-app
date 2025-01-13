@@ -8,10 +8,9 @@ import { FaHeadphones } from "react-icons/fa";
 
 const About = () => {
   return (
-    <div className="min-h-screen p-32 items-center justify-center bg-white">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-          
+    <div className="container mx-auto bg-white">
+      <div className="container mx-auto">
+        <div className="grid sm:grid-cols-2 gap-10 space-y-10 items-center">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
               About Us
@@ -31,7 +30,7 @@ const About = () => {
               shoppers have to help them with decision making.
             </p>
           </div>
-          
+
           <div>
             <img
               src="/images/about.webp"
@@ -41,66 +40,49 @@ const About = () => {
           </div>
         </div>
 
-        
-        <div className="flex justify-center items-center  px-10 mt-40">
-          <div className="grid grid-cols-4 gap-10 w-[200px] md:w-full mx-10">
-            
-
-            <div className="border border-gray-300 p-6 rounded-lg text-center w-[250px] min-h-[200px]">
-              <div className="flex justify-center iteam-center p-6 text-4xl ">
-                {" "}
-                <SiHomeassistantcommunitystore />
-              </div>
-              <h1 className="font-bold text-2xl">10.5k</h1>
-              <p className="text-gray-700 font-serif">
-                Sallers active our site
-              </p>
+        <div className="grid sm:grid-cols-4 gap-10  items-center justify-evenly py-16">
+          <div className="border border-gray-300 p-6 rounded-lg text-center w-[250px] min-h-[200px]">
+            <div className="flex justify-center  p-6 text-4xl ">
+              {" "}
+              <SiHomeassistantcommunitystore />
             </div>
+            <h1 className="font-bold text-2xl">10.5k</h1>
+            <p className="text-gray-700 font-serif">Sailers active our site</p>
+          </div>
 
-           
-            <div className="border border-gray-300 p-6 rounded-lg text-center bg-red-600 w-[250px] ">
-              <div className="flex justify-center iteam-center p-6 text-4xl text-white ">
-                {" "}
-                <SiCashapp />
-              </div>
-              <h1 className="text-2xl font-bold text-white">33k</h1>
-              <p className="text-white font-serif">Mopnthly Produduct Sale</p>
+          <div className="border border-gray-300 p-6 rounded-lg text-center bg-red-600 w-[250px] ">
+            <div className="flex justify-center  p-6 text-4xl text-white ">
+              {" "}
+              <SiCashapp />
             </div>
+            <h1 className="text-2xl font-bold text-white">33k</h1>
+            <p className="text-white font-serif">Monthly Products Sale</p>
+          </div>
 
-           
-            <div className="border border-gray-300 p-6 rounded-lg text-center w-[250px]">
-              <div className="flex justify-center iteam-center p-6 text-4xl ">
-                {" "}
-                <BiSolidShoppingBagAlt />
-              </div>
-              <h1 className="text-2xl font-bold">45.5k</h1>
-              <p className="text-gray-700 font-serif">
-                Customer active in our site
-              </p>
+          <div className="border border-gray-300 p-6 rounded-lg text-center w-[250px]">
+            <div className="flex justify-center  p-6 text-4xl ">
+              {" "}
+              <BiSolidShoppingBagAlt />
             </div>
+            <h1 className="text-2xl font-bold">45.5k</h1>
+            <p className="text-gray-700 font-serif">
+              Customer active in our site
+            </p>
+          </div>
 
-           
-            <div className="border border-gray-300 p-6 rounded-lg text-center w-[250px] ">
-              <div className="flex justify-center iteam-center p-6 text-4xl ">
-                {" "}
-                <SiCashapp />
-              </div>
-              <h1 className="text-2xl font-bold">25k</h1>
-              <p className="text-gray-700 font-serif">
-                Anual gross sale in our site
-              </p>
+          <div className="border border-gray-300 p-6 rounded-lg text-center w-[250px] ">
+            <div className="flex justify-center  p-6 text-4xl ">
+              {" "}
+              <SiCashapp />
             </div>
+            <h1 className="text-2xl font-bold">25k</h1>
+            <p className="text-gray-700 font-serif">
+              Anal gross sale in our site
+            </p>
           </div>
         </div>
-      
-      </div>
-
-      
-
-      <div className="flex justify-center iteam-center mt-40 px-10">
-        <div className="grid grid-cols-3 gap-32 mx-auto">
-        
-          <div className=" border-gray-400 p-6 rounded-lg text-center w-[400px] min-h-[400px]">
+        <div className="grid sm:grid-cols-3 justify-evenly items-center px-10">
+          <div className=" border-gray-400 p-6 rounded-lg text-center">
             <img
               src="/images/image-1.png"
               alt="about-us"
@@ -114,7 +96,7 @@ const About = () => {
             <p className="text-gray-900 text-1xl  text-start">
               Founder & Chairman
             </p>
-           
+
             <div className="flex justify-start gap-4 mt-2">
               <span className="text-2xl">
                 <CiTwitter />
@@ -128,8 +110,7 @@ const About = () => {
             </div>
           </div>
 
-         
-          <div className=" border-gray-400 p-6 rounded-lg text-center w-[400px] min-h-[400px]">
+          <div className=" border-gray-400 p-6 rounded-lg text-center ">
             <img
               src="/images/image-2.png"
               alt="about-us"
@@ -143,8 +124,6 @@ const About = () => {
               Managing Director
             </p>
 
-           
-
             <div className="flex justify-start gap-4 p-2">
               <span className="text-2xl">
                 <CiTwitter />
@@ -157,8 +136,8 @@ const About = () => {
               </span>
             </div>
           </div>
-        
-          <div className=" border-gray-400 p-6 rounded-lg text-center w-[400px] min-h-[400px]">
+
+          <div className=" border-gray-400 p-6 rounded-lg text-center ">
             <img
               src="/images/image-3.png"
               alt="about-us"
@@ -173,7 +152,6 @@ const About = () => {
               Product Designer
             </p>
 
-
             <div className="flex justify-start gap-4 mt-2">
               <span className="text-2xl">
                 <CiTwitter />
@@ -187,55 +165,47 @@ const About = () => {
             </div>
           </div>
         </div>
+        <div className=" grid sm:grid-cols-3 justify-evenly py-16 gap-6">
+          <div className="flex flex-col items-center text-center gap-2">
+            <div className="flex justify-center items-center h-16 w-full">
+              <FaTruckFast className="text-4xl text-black" />
+            </div>
+
+            <h1 className="text-lg sm:text-xl lg:text-2xl text-black font-bold">
+              FREE AND FAST DELIVERY
+            </h1>
+            <p className="text-gray-600 text-sm sm:text-base">
+              Free delivery for all orders over $140
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center text-center gap-2 ">
+            <div className="flex justify-center items-center h-16 w-full">
+              <FaHeadphones className="text-4xl text-black" />
+            </div>
+            <h1 className="text-lg sm:text-2xl lg:text-2xl text-black font-bold">
+              24/7 CUSTOMER SERVICE
+            </h1>
+            <p className="text-gray-600 text-sm sm:text-base">
+              Friendly 24/7 customer support
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center text-center gap-2 ">
+            <div className="flex justify-center items-center h-16 w-full">
+              <FaMoneyCheckDollar className="text-4xl text-black" />
+            </div>
+            <h1 className="text-lg sm:text-2xl lg:text-2xl text-black font-bold">
+              MONEY BACK GUARANTEE
+            </h1>
+            <p className="text-gray-600 text-sm sm:text-base">
+              We reurn money within 30 days
+            </p>
+          </div>
+        </div>
       </div>
-
-      
-
-     <div className="flex flex-wrap justify-center items-center px-10 py-10 gap-10 lg:gap-20">
-        <div className="flex flex-col items-cenetr text-center gap-2 w-full sm:w-auto">
-          <div className="flex justify-center items-center h-16 w-full">
-            <FaTruckFast className="text-4xl text-black" />
-          </div>
-         
-          <h1 className="text-lg sm:text-xl lg:text-2xl text-black font-bold">
-            FREE AND FAST DELIVERY
-          </h1>
-          <p className="text-gray-600 text-sm sm:text-base">
-            Free delivery for all orders over $140
-          </p>
-        </div>
-
-        <div className="flex flex-col items-center text-center gap-2 w-full sm:w-auto">
-        <div className="flex justify-center items-center h-16 w-full">
-            <FaHeadphones className="text-4xl text-black" />
-          </div>
-          <h1 className="text-lg sm:text-2xl lg:text-2xl text-black font-bold">
-            24/7 CUSTOMER SERVICE
-          </h1>
-          <p className="text-gray-600 text-sm sm:text-base">
-            Friendly 24/7 customer support 
-          </p>
-        </div>
-
-        <div className="flex flex-col items-center text-center gap-2 w-full sm:w-auto">
-        <div className="flex justify-center items-center h-16 w-full">
-            <FaMoneyCheckDollar className="text-4xl text-black" />
-          </div>
-          <h1 className="text-lg sm:text-2xl lg:text-2xl text-black font-bold">
-            MONEY BACK GUARANTEE
-          </h1>
-          <p className="text-gray-600 text-sm sm:text-base">
-            We reurn money within 30 days
-          </p>
-        </div>
-      </div>  
-     
-      
-
     </div>
   );
 };
 
 export default About;
-
-

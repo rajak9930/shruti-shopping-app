@@ -26,8 +26,8 @@ const Home = () => {
   };
   return (
     <div className="container mx-auto   px-4 py-8">
-      <div className="flex flex-col md:flex-row">
-        <div className=" md:basis-1/3 w-full md:w-auto md:sticky md:top-0 ">
+      <div className=" grid sm:grid-cols-12 ">
+        <div className="sm:col-span-4 w-full">
           <ul className="border-r-2 flex-col border-gray-200 pr-4 ">
             {loading ? (
               <span className="font-bold">loading...</span>
@@ -54,18 +54,18 @@ const Home = () => {
         </div>
         
 
-        <div className="md:basis-2/3 w-full md:w-[70%]">
-          <Slider {...settings}>
+        <div className="sm:col-span-4 w-full ">
+          {/* <Slider {...settings}>
             {images.map((image, index) => (
               <div key={index} className="w-full h-auto">
                 <img
                   src={image}
-                  className="object-cover w-full h-[300px] md:h-[500px] lg:h-[600px]"
+                  className="object-cover w-full"
                   alt={`Image ${index + 1}`}
                 />
               </div>
             ))}
-          </Slider>
+          </Slider> */}
         </div>
       </div>
     </div>

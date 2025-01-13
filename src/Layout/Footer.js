@@ -7,8 +7,7 @@ import { LiaInstagram, LiaLinkedinIn } from "react-icons/lia";
 
 const Footer = () => {
   return (
-    <div className="bg-black w-full h-[450px] px-20 py-20 mt-20">
-      <div className="grid grid-cols-5 gap-10 items-start">
+    <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 px-20 py-20 mt-20 items-start gap-4 bg-black text-white"> 
         <div className="flex flex-col">
           <h1 className="text-white font-bold text-2xl mb-8 ">Exclusive</h1>
           <ul className="space-y-2">
@@ -80,7 +79,7 @@ const Footer = () => {
             </div>
           </ul>
         </div>
-      </div>
+     
     </div>
   );
 };

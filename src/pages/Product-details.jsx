@@ -32,28 +32,30 @@ const ProductDetails = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row  bg-gray-50  gap-16 container mx-auto">
+    <div className=" grid sm:grid-cols-12  bg-gray-50  gap-16 container mx-auto ">
       {/* Left side */}
-      <div className="w-full h-[650px] bg-gray-100 flex  mb-4 mx-auto items-center justify-center">
-        {item ? (
-          <img
-            src={item.image}
-            alt={item.title}
-            className=" max-w-full max-h-full"
-          />
-        ) : (
-          <p>Loading...</p>
-        )}
+      <div className="sm:col-span-4 bg-gray-100 mb-4 flex items-center justify-center">
+    {item ? (
+      <div className="w-full max-w-[50%] md:max-w-[100%] mx-auto bg-gray-100 rounded-lg p-4">
+        <img
+          src={item.image}
+          alt={item.title}
+          className="w-full h-auto object-contain rounded-lg shadow-md"
+        />
       </div>
+    ) : (
+      <p className="text-gray-500 text-sm font-medium">Loading...</p>
+    )}
+  </div>
 
       {/* Right side */}
-      <div className="flex flex-col justify-center p-6 space-y-6">
+      <div className=" sm:col-span-8  p-6 space-y-6">
         {item ? (
           <>
-            <h1 className="text-4xl font-bold">{item.title}</h1>
+            <h1 className="text-4xl font-bold ">{item.title}</h1>
             <div className="flex flex-row">
-          <Rate value={item.rating.rate} disabled allowHalf />
-        </div>
+              <Rate value={item.rating.rate} disabled allowHalf />
+            </div>
             <h2 className="text-2xl font-semibold text-gray-800">
               Price: ${item.price}
             </h2>
@@ -61,7 +63,8 @@ const ProductDetails = () => {
             <hr className="border-t-2 border-gray-400 mt-6" />{" "}
             {/* Horizontal Line */}
             {/* BUTTON PART */}
-            <div className="flex gap-10 items-center mt-4">
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-10  mt-4">
+              <div className="">
               <button className="flex items-center justify-between px-6 py-3 bg-white text-black rounded-md border border-gray-400 ">
                 <span className="text-xl">-</span>
                 <div className="border-l-2 border-gray-400 mx-4 h-6"></div>{" "}
@@ -71,15 +74,18 @@ const ProductDetails = () => {
                 {/* Vertical Line */}
                 <span className="text-xl">+</span>
               </button>
-
+              </div>
               {/* Buy Now Button */}
-              <button className="text-xl w-40 px-6 py-4 bg-black text-white rounded-md ml-4 hover:bg-gray-700">
+              <div className="">
+              <button className="text-xl  px-6 py-4 bg-black text-white rounded-md  hover:bg-gray-700">
                 Buy Now
               </button>
-
+              </div>
+              <div className="">
               <button className="bg-black  p-4 rounded-lg border border-gray-500 hover:bg-gray-700 transition duration-300">
                 <FaRegHeart className="text-white text-2xl  " />
               </button>
+            </div>
             </div>
             {/* Box  Free Delivery and Return Delivery */}
             <div className="p-4 mt-6 rounded-lg border border-gray-400 ">
