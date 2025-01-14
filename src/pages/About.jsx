@@ -152,8 +152,7 @@ const About = () => {
               </span>
             </div>
           </div>
- 
-          
+
           <div className=" border-gray-400 p-6 rounded-lg text-center ">
             <img
               src="/images/image-2.png"
@@ -210,7 +209,7 @@ const About = () => {
           </div>
         </div>
 
-              {/* Three images */}
+        {/* Three images */}
         <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-evenly py-16 gap-6">
           <div className="flex flex-col items-center text-center gap-2">
             <div className="flex justify-center items-center h-16 w-full">
