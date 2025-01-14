@@ -6,8 +6,7 @@ const Signup = () => {
   return (
     <div className="container mx-auto bg-white p-10">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-       
-        <div className="order-1 lg:order-none">
+        <div className="hidden sm:block md:hidden lg:block ">
           <img
             src="/images/phone-img.png"
             alt="Phone"
@@ -15,8 +14,7 @@ const Signup = () => {
           />
         </div>
 
-       
-        <div className="space-y-6 p-10 order-2 lg:order-none ">
+        <div className="space-y-6 p-10  ">
           <h1 className="text-3xl font-bold text-gray-800">
             Create an account
           </h1>
@@ -41,7 +39,6 @@ const Signup = () => {
               <div className="border-b-2 border-gray-500"></div>
             </div>
 
-         
             <div>
               <button
                 type="submit"
@@ -63,11 +60,10 @@ const Signup = () => {
             <div className="flex items-center justify-center space-x-6">
               <p className="cursor-pointer">Already have account?</p>
               <Link to="/login">
-              <p className="cursor-pointer">
-                Log in <hr className=" w-10 border-black border-t-2" />
-              </p>
+                <p className="cursor-pointer">
+                  Log in <hr className=" w-10 border-black border-t-2" />
+                </p>
               </Link>
-              
             </div>
           </form>
         </div>
@@ -77,7 +73,3 @@ const Signup = () => {
 };
 
 export default Signup;
-
-
-
-

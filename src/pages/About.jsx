@@ -15,7 +15,7 @@ const About = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
               About Us
             </h2>
-            <p className="text-lg text-gray-600 font-semibold">
+            <p className="text-lg text-gray-600 font-semibold poppins-light-italic">
               An About Us page is a section on a website that provides
               information about a company, organization, or individual. It’s an
               opportunity to tell your brand’s story, share your vision or
