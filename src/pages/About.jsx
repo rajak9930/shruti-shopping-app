@@ -40,7 +40,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="grid sm:grid-cols-4 gap-10  items-center justify-evenly py-16">
+        {/* <div className="grid sm:grid-cols-4 gap-10  items-center justify-evenly py-16">
           <div className="border border-gray-300 p-6 rounded-lg text-center w-[250px] min-h-[200px]">
             <div className="flex justify-center  p-6 text-4xl ">
               {" "}
@@ -80,8 +80,51 @@ const About = () => {
               Anal gross sale in our site
             </p>
           </div>
+        </div> */}
+
+        {/* Four images */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 items-center justify-evenly py-16 ">
+          <div className="border border-gray-300 p-6 rounded-lg text-center max-w-sm mx-auto min-h-[200px] w-[250px] ">
+            <div className="flex justify-center p-6 text-4xl">
+              <SiHomeassistantcommunitystore />
+            </div>
+            <h1 className="font-bold text-2xl">10.5k</h1>
+            <p className="text-gray-700 font-serif">
+              Sailers active on our site
+            </p>
+          </div>
+
+          <div className="border border-gray-300 p-6 rounded-lg text-center bg-red-600 max-w-sm mx-auto min-h-[200px] w-[250px] ">
+            <div className="flex justify-center p-6 text-4xl text-white">
+              <SiCashapp />
+            </div>
+            <h1 className="text-2xl font-bold text-white">33k</h1>
+            <p className="text-white font-serif">Monthly Products Sale</p>
+          </div>
+
+          <div className="border border-gray-300 p-6 rounded-lg text-center max-w-sm mx-auto min-h-[200px] w-[250px]">
+            <div className="flex justify-center p-6 text-4xl">
+              <BiSolidShoppingBagAlt />
+            </div>
+            <h1 className="text-2xl font-bold">45.5k</h1>
+            <p className="text-gray-700 font-serif">
+              Customer active on our site
+            </p>
+          </div>
+
+          <div className="border border-gray-300 p-6 rounded-lg text-center max-w-sm mx-auto min-h-[200px] w-[250px]">
+            <div className="flex justify-center p-6 text-4xl">
+              <SiCashapp />
+            </div>
+            <h1 className="text-2xl font-bold">25k</h1>
+            <p className="text-gray-700 font-serif">
+              Annual gross sale on our site
+            </p>
+          </div>
         </div>
-        <div className="grid sm:grid-cols-3 justify-evenly items-center px-10">
+
+        {/* Three images */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-evenly items-center px-10">
           <div className=" border-gray-400 p-6 rounded-lg text-center">
             <img
               src="/images/image-1.png"
@@ -109,7 +152,8 @@ const About = () => {
               </span>
             </div>
           </div>
-
+ 
+          
           <div className=" border-gray-400 p-6 rounded-lg text-center ">
             <img
               src="/images/image-2.png"
@@ -165,7 +209,9 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className=" grid sm:grid-cols-3 justify-evenly py-16 gap-6">
+
+              {/* Three images */}
+        <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-evenly py-16 gap-6">
           <div className="flex flex-col items-center text-center gap-2">
             <div className="flex justify-center items-center h-16 w-full">
               <FaTruckFast className="text-4xl text-black" />

@@ -11,6 +11,8 @@ import Redux from "./pages/Redux";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Footer from "./Layout/Footer";
+import Signup from "./pages/Sign-up";
+import Login from "./pages/Login";
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
         <Route path="cart" element={<Cart />} />
         <Route path="details/:id" element={<ProductDetails />} />
         <Route path="cat/:cat" element={<CatDetails/>}/>
+        <Route path="sign" element={<Signup/>}/>
+        <Route path="login" element={<Login />} />
       </Routes>
       <Footer />
     </BrowserRouter>
