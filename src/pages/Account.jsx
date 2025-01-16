@@ -7,8 +7,8 @@ const Account = () => {
         <p className="text-gray-600 text-sm">Home / My Account</p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-        <div className="sm:block md:block lg:block  flex flex-col  h-full">
+      <div className="grid  sm:grid-cols-12 gap-10">
+        <div className="sm:col-span-3 flex flex-col  h-full">
           {/* Sidebar */}
           <div className="bg-white rounded-md p-4">
             <ul className="space-y-4">
@@ -25,13 +25,13 @@ const Account = () => {
         </div>
 
         {/* Form */}
-        <div className="bg-white  shadow-md rounded-md p-8 lg:col-span-3 mx-auto">
+        <div className="bg-white  shadow-md rounded-md sm:col-span-9 p-4">
           <h2 className="text-xl font-semibold text-black mb-6">
             Edit Your Profile
           </h2>
           <form>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-              <div className="relative">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 mb-6">
+              <div className="">
                 <label
                   htmlFor="name"
                   className="block text-gray-700 font-semibold mb-2"
@@ -44,7 +44,7 @@ const Account = () => {
                   className="border border-gray-300 p-3 rounded-md w-full focus:outline-none focus:border-black"
                 />
               </div>
-              <div className="relative">
+              <div className="">
                 <label
                   htmlFor="name"
                   className="block text-gray-700 font-semibold mb-2"
@@ -58,7 +58,7 @@ const Account = () => {
                 />
               </div>
 
-              <div className="relative">
+              <div className="">
                 <label
                   htmlFor="name"
                   className="block text-gray-700 font-semibold mb-2"
@@ -72,7 +72,7 @@ const Account = () => {
                 />
               </div>
 
-              <div className="relative">
+              <div className="">
                 <label
                   htmlFor="name"
                   className="block text-gray-700 font-semibold mb-2"
@@ -88,10 +88,10 @@ const Account = () => {
             </div>
 
             {/* Password*/}
-            <div className="grid grid-cols-1 gap-4 mb-6">
-              <div className="relative">
+            <div className="grid gap-4 mb-6 ">
+              
                 <label
-                  htmlFor="name"
+                  htmlFor="password"
                   className="block text-gray-700 font-semibold mb-2"
                 >
                   Password Changes
@@ -99,18 +99,18 @@ const Account = () => {
                 <input
                   type="password"
                   placeholder="Current Password"
-                  className="border border-gray-300 p-3 rounded-md w-[800px] focus:outline-none focus:border-black"
+                  className="border border-gray-300 p-3 rounded-md  focus:outline-none focus:border-black"
                 />
-              </div>
+            
               <input
                 type="password"
                 placeholder="New Password"
-                className="border border-gray-300 p-3 rounded-md w-[800px] focus:outline-none focus:border-black"
+                className="border border-gray-300 p-3 rounded-md  focus:outline-none focus:border-black"
               />
               <input
                 type="password"
                 placeholder="Confirm New Password"
-                className="border border-gray-300 p-3 rounded-md w-[800px] focus:outline-none focus:border-black"
+                className="border border-gray-300 p-3 rounded-md  focus:outline-none focus:border-black"
               />
             </div>
 
