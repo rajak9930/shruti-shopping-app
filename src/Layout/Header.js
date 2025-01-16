@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { HiMagnifyingGlass } from "react-icons/hi2";
-import { IoHeartOutline } from "react-icons/io5";
+import { IoHeartOutline,IoPersonOutline } from "react-icons/io5";
 import { LuShoppingCart } from "react-icons/lu";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 
@@ -91,6 +91,11 @@ const Header = () => {
           <button className="bg-black-700 p-2 rounded-lg hover:bg-gray-600 transition duration-300">
             <LuShoppingCart className="text-black text-2xl" />
           </button>
+
+          <button className="bg-black-700 p-2 rounded-lg hover:bg-gray-600 transition duration-300">
+            <IoPersonOutline className="text-black text-2xl" />
+          </button>
+        
         </div>
       </nav>
 

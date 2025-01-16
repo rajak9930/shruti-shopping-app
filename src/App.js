@@ -13,6 +13,9 @@ import "slick-carousel/slick/slick-theme.css";
 import Footer from "./Layout/Footer";
 import Signup from "./pages/Sign-up";
 import Login from "./pages/Login";
+import Contact from "./pages/Contact";
+import Account from "./pages/Account";
+import Notfound from "./pages/Notfound";
 
 function App() {
   return (
@@ -28,6 +31,13 @@ function App() {
         <Route path="cat/:cat" element={<CatDetails/>}/>
         <Route path="sign" element={<Signup/>}/>
         <Route path="login" element={<Login />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="account" element={<Account />} />
+
+        <Route path="*" element={<Notfound/>} />
+
+
+
       </Routes>
       <Footer />
     </BrowserRouter>
